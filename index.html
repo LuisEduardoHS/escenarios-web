@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nombre</title>
+    <title>For My Pawty</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
+
+    <!-- ═══════════════════════════════════════
+         HEADER / NAV
+    ═══════════════════════════════════════ -->
     <header id="main-header">
         <nav class="nav-container container">
-            <a href="#" class="logo">Nombre</a>
+            <a href="#inicio" class="logo">FM<span>Pawty</span></a>
 
             <button class="menu-toggle" aria-label="Abrir menu">
                 <span class="bar"></span>
@@ -21,18 +26,286 @@
             <ul class="nav-menu">
                 <li><a href="#inicio" class="nav-link">Inicio</a></li>
                 <li><a href="#historia" class="nav-link">Historia</a></li>
+                <li><a href="#caracteristicas" class="nav-link">Características</a></li>
                 <li><a href="#galeria" class="nav-link">Galería</a></li>
                 <li><a href="#contacto" class="nav-link">Contacto</a></li>
             </ul>
+
+            <a href="#" class="btn btn-primary btn-nav">Jugar Ahora</a>
         </nav>
     </header>
 
     <main>
 
+        <!-- ═══════════════════════════════════════
+             SECCIÓN 1: HERO / INICIO
+        ═══════════════════════════════════════ -->
+        <section id="inicio" class="hero">
+            <div class="hero-bg-grid"></div>
+            <div class="hero-glow"></div>
+
+            <div class="hero-content container">
+                <div class="hero-text">
+                    <span class="hero-tag">— Subtítulo del juego —</span>
+                    <h1 class="hero-title">For My <span>Pawty</span></h1>
+                    <p class="hero-desc">
+                        Descripción breve y atractiva del juego. Una o dos frases que enganchen al jugador desde el primer momento y expliquen de qué se trata la experiencia.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn btn-primary">Jugar Ahora</a>
+                        <a href="#historia" class="btn btn-outline">Conocer Más</a>
+                    </div>
+                    <div class="hero-platforms">
+                        <span>Disponible en:</span>
+                        <ul>
+                            <li>PC</li>
+                            <li>Consola</li>
+                            <li>Mobile</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="hero-placeholder">
+                        <span>Arte / Personaje Principal</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-scroll-hint">
+                <span>Scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+             SECCIÓN 2: HISTORIA
+        ═══════════════════════════════════════ -->
+        <section id="historia" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Narrativa</span>
+                    <h2 class="section-title">La Historia</h2>
+                </div>
+
+                <div class="historia-grid">
+                    <div class="historia-visual">
+                        <div class="placeholder-box tall">
+                            <span>Arte / Escena del juego</span>
+                        </div>
+                        <div class="historia-badge">
+                            <strong>Año de lanzamiento</strong>
+                            <span>202X</span>
+                        </div>
+                    </div>
+
+                    <div class="historia-text">
+                        <p class="historia-lead">Párrafo introductorio. El mundo del juego, el contexto y la atmósfera que envuelve toda la narrativa.</p>
+                        <p>Segundo párrafo con más detalles sobre los conflictos principales, los eventos que desencadenan la aventura y lo que está en juego para los personajes.</p>
+                        <p>Tercer párrafo que profundiza en la trama, los antagonistas y los misterios que el jugador irá descubriendo a lo largo de la experiencia.</p>
+
+                        <div class="historia-stats">
+                            <div class="stat">
+                                <strong>00+</strong>
+                                <span>Horas de contenido</span>
+                            </div>
+                            <div class="stat">
+                                <strong>00+</strong>
+                                <span>Escenarios únicos</span>
+                            </div>
+                            <div class="stat">
+                                <strong>00+</strong>
+                                <span>Personajes</span>
+                            </div>
+                        </div>
+
+                        <a href="#" class="btn btn-primary">Leer Más</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+             SECCIÓN 3: CARACTERÍSTICAS
+        ═══════════════════════════════════════ -->
+        <section id="caracteristicas" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Gameplay</span>
+                    <h2 class="section-title">Características</h2>
+                    <p class="section-desc">Todo lo que hace única esta experiencia. Descubre las mecánicas y elementos que definen el juego.</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">◈</div>
+                        <h3>Característica 1</h3>
+                        <p>Descripción de esta mecánica o elemento del juego. Qué la hace especial y cómo impacta en la experiencia del jugador.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">◉</div>
+                        <h3>Característica 2</h3>
+                        <p>Descripción de esta mecánica o elemento del juego. Qué la hace especial y cómo impacta en la experiencia del jugador.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">◆</div>
+                        <h3>Característica 3</h3>
+                        <p>Descripción de esta mecánica o elemento del juego. Qué la hace especial y cómo impacta en la experiencia del jugador.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">◎</div>
+                        <h3>Característica 4</h3>
+                        <p>Descripción de esta mecánica o elemento del juego. Qué la hace especial y cómo impacta en la experiencia del jugador.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">▣</div>
+                        <h3>Característica 5</h3>
+                        <p>Descripción de esta mecánica o elemento del juego. Qué la hace especial y cómo impacta en la experiencia del jugador.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⬡</div>
+                        <h3>Característica 6</h3>
+                        <p>Descripción de esta mecánica o elemento del juego. Qué la hace especial y cómo impacta en la experiencia del jugador.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+             SECCIÓN 4: GALERÍA
+        ═══════════════════════════════════════ -->
+        <section id="galeria" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Media</span>
+                    <h2 class="section-title">Galería</h2>
+                    <p class="section-desc">Imágenes, capturas y arte del juego.</p>
+                </div>
+
+                <div class="gallery-tabs">
+                    <button class="tab-btn active" data-tab="screenshots">Capturas</button>
+                    <button class="tab-btn" data-tab="arte">Arte</button>
+                    <button class="tab-btn" data-tab="videos">Videos</button>
+                </div>
+
+                <div class="gallery-grid" id="gallery-screenshots">
+                    <div class="gallery-item large">
+                        <div class="placeholder-box"><span>Screenshot destacado</span></div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="placeholder-box"><span>Screenshot 2</span></div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="placeholder-box"><span>Screenshot 3</span></div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="placeholder-box"><span>Screenshot 4</span></div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="placeholder-box"><span>Screenshot 5</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+             SECCIÓN 5: CONTACTO
+        ═══════════════════════════════════════ -->
+        <section id="contacto" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Contacto</span>
+                    <h2 class="section-title">Contáctanos</h2>
+                    <p class="section-desc">¿Tienes preguntas, sugerencias o solo quieres saludar? Escríbenos, estamos aquí.</p>
+                </div>
+
+                <div class="contacto-grid">
+                    <form class="contacto-form" id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo</label>
+                                <input type="email" id="email" name="email" placeholder="tu@correo.com">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="asunto">Asunto</label>
+                            <input type="text" id="asunto" name="asunto" placeholder="Sobre qué quieres hablar">
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Enviar Mensaje</button>
+                    </form>
+
+                    <div class="contacto-info">
+                        <div class="info-block">
+                            <h4>Síguenos</h4>
+                            <ul class="social-links">
+                                <li><a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i> Twitter / X</a></li>
+                                <li><a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-discord"></i> Discord</a></li>
+                                <li><a href="https://www.instagram.com/formypawty/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                                <li><a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
+                                <li><a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-tiktok"></i> TikTok</a></li>
+                            </ul>
+                        </div>
+                        <div class="info-block">
+                            <h4>Correo</h4>
+                            <p class="info-text">contacto@juego.com</p>
+                        </div>
+                        <div class="info-block">
+                            <h4>Prensa</h4>
+                            <p class="info-text">prensa@juego.com</p>
+                        </div>
+                        <div class="newsletter-box">
+                            <h4>Newsletter</h4>
+                            <p>Suscríbete y recibe novedades antes que nadie.</p>
+                            <div class="newsletter-form">
+                                <input type="email" placeholder="tu@correo.com">
+                                <button class="btn btn-primary">OK</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <footer>
-
+    <!-- ═══════════════════════════════════════
+         FOOTER
+    ═══════════════════════════════════════ -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-top">
+                <a href="#inicio" class="footer-logo">FM<span>Pawty</span></a>
+                <ul class="footer-nav">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#historia">Historia</a></li>
+                    <li><a href="#caracteristicas">Características</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+                <ul class="footer-social">
+                    <li><a href="#" aria-label="Twitter" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="#" aria-label="Discord" target="_blank" rel="noopener"><i class="fa-brands fa-discord"></i></a></li>
+                    <li><a href="https://www.instagram.com/formypawty/" aria-label="Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#" aria-label="YouTube" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a href="#" aria-label="TikTok" target="_blank" rel="noopener"><i class="fa-brands fa-tiktok"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">&copy; 2026 For My Pawty. Todos los derechos reservados.</p>
+                <div class="footer-legal">
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos de Uso</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="js/main.js"></script>
