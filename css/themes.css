@@ -1,0 +1,103 @@
+/* ═══════════════════════════════════════════════
+   THEMES — For My Pawty
+   Sistema automático claro/oscuro basado en la
+   preferencia del sistema operativo.
+
+   Dark  → defecto  (:root)
+   Light → @media (prefers-color-scheme: light)
+═══════════════════════════════════════════════ */
+
+
+/* ─────────────────────────────────────────────
+   MODO OSCURO (defecto)
+───────────────────────────────────────────── */
+:root {
+    /* ── Marca ── */
+    --primary:              #ffd95e;
+    --primary-dark:         #c9a52a;
+
+    /* ── Layout ── */
+    --radius:               8px;
+    --section-pad:          110px;
+    --transition:           all .3s ease;
+
+    /* ── Fondos ── */
+    --bg:                   #1a1a1a;
+    --bg-alt:               #111111;
+    --bg-card:              #202020;
+    --bg-card-2:            #252525;
+
+    /* ── Bordes ── */
+    --border:               #2a2a2a;
+
+    /* ── Texto ── */
+    --text:                 #ffffff;
+    --text-muted:           #888888;
+    --text-soft:            #cccccc;
+
+    /* ── Header ── */
+    --header-bg:            rgba(0, 0, 0, .5);
+    --header-bg-scrolled:   rgba(10, 10, 10, .92);
+
+    /* ── Menú mobile ── */
+    --mobile-menu-bg:       rgba(8, 8, 8, .97);
+
+    /* ── Hero (gradientes) ── */
+    --hero-radial-1:        rgba(80, 50, 0, .55);
+    --hero-radial-2:        rgba(30, 20, 0, .4);
+    --hero-base-from:       #0d0d0d;
+    --hero-base-mid:        #1a1a1a;
+    --hero-base-to:         #0f0f0f;
+    --hero-grid-line:       rgba(255, 255, 255, .025);
+
+    /* ── Componentes ── */
+    --btn-outline-border:   rgba(255, 255, 255, .4);
+    --placeholder-text:     #444;
+    --card-hover-shadow:    rgba(0, 0, 0, .4);
+    --footer-link:          #555;
+    --footer-meta:          #444;
+}
+
+
+/* ─────────────────────────────────────────────
+   MODO CLARO (cuando el sistema lo prefiere)
+───────────────────────────────────────────── */
+@media (prefers-color-scheme: light) {
+    :root {
+        /* ── Fondos ── */
+        --bg:                   #f7f5ef;
+        --bg-alt:               #eeecea;
+        --bg-card:              #ffffff;
+        --bg-card-2:            #f0ede8;
+
+        /* ── Bordes ── */
+        --border:               #dddbd4;
+
+        /* ── Texto ── */
+        --text:                 #1a1a1a;
+        --text-muted:           #666666;
+        --text-soft:            #3d3d3d;
+
+        /* ── Header ── */
+        --header-bg:            rgba(247, 245, 239, .65);
+        --header-bg-scrolled:   rgba(247, 245, 239, .97);
+
+        /* ── Menú mobile ── */
+        --mobile-menu-bg:       rgba(247, 245, 239, .98);
+
+        /* ── Hero (gradientes) ── */
+        --hero-radial-1:        rgba(200, 150, 0, .18);
+        --hero-radial-2:        rgba(160, 110, 0, .12);
+        --hero-base-from:       #ede9df;
+        --hero-base-mid:        #f7f5ef;
+        --hero-base-to:         #e8e4da;
+        --hero-grid-line:       rgba(0, 0, 0, .045);
+
+        /* ── Componentes ── */
+        --btn-outline-border:   rgba(0, 0, 0, .25);
+        --placeholder-text:     #c0bdba;
+        --card-hover-shadow:    rgba(0, 0, 0, .1);
+        --footer-link:          #888888;
+        --footer-meta:          #999999;
+    }
+}

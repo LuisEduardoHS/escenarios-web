@@ -1,20 +1,7 @@
 /* ═══════════════════════════════════════════════
-   VARIABLES & RESET
+   RESET
+   (Variables de tema en css/themes.css)
 ═══════════════════════════════════════════════ */
-:root {
-    --primary:        #ffd95e;
-    --primary-dark:   #c9a52a;
-    --bg:             #1a1a1a;
-    --bg-alt:         #111111;
-    --bg-card:        #202020;
-    --border:         #2a2a2a;
-    --text:           #ffffff;
-    --text-muted:     #888888;
-    --text-soft:      #cccccc;
-    --transition:     all .3s ease;
-    --radius:         8px;
-    --section-pad:    110px;
-}
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -78,7 +65,7 @@ body {
 .btn-outline {
     background-color: transparent;
     color: var(--text);
-    border-color: rgba(255, 255, 255, .4);
+    border-color: var(--btn-outline-border);
 }
 
 .btn-outline:hover {
@@ -107,7 +94,7 @@ body {
     z-index: 1000;
     padding: 22px 0;
     transition: var(--transition);
-    background-color: rgba(0, 0, 0, .5);
+    background-color: var(--header-bg);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid transparent;
@@ -115,7 +102,7 @@ body {
 
 #main-header.scrolled {
     padding: 14px 0;
-    background-color: rgba(10, 10, 10, .92);
+    background-color: var(--header-bg-scrolled);
     border-bottom-color: var(--border);
 }
 
@@ -259,7 +246,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #444;
+    color: var(--placeholder-text);
     font-size: .85rem;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -287,9 +274,9 @@ body {
     position: relative;
     overflow: hidden;
     background:
-        radial-gradient(ellipse at 65% 50%, rgba(80, 50, 0, .55) 0%, transparent 60%),
-        radial-gradient(ellipse at 20% 80%, rgba(30, 20, 0, .4) 0%, transparent 50%),
-        linear-gradient(170deg, #0d0d0d 0%, #1a1a1a 50%, #0f0f0f 100%);
+        radial-gradient(ellipse at 65% 50%, var(--hero-radial-1) 0%, transparent 60%),
+        radial-gradient(ellipse at 20% 80%, var(--hero-radial-2) 0%, transparent 50%),
+        linear-gradient(170deg, var(--hero-base-from) 0%, var(--hero-base-mid) 50%, var(--hero-base-to) 100%);
     padding-top: 90px;
 }
 
@@ -297,8 +284,8 @@ body {
     position: absolute;
     inset: 0;
     background-image:
-        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+        linear-gradient(var(--hero-grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--hero-grid-line) 1px, transparent 1px);
     background-size: 60px 60px;
     pointer-events: none;
 }
@@ -400,14 +387,14 @@ body {
 }
 
 .hero-placeholder {
-    background: linear-gradient(135deg, var(--bg-card), #252525);
+    background: linear-gradient(135deg, var(--bg-card), var(--bg-card-2));
     border: 1px solid var(--border);
     border-radius: 12px;
     min-height: 480px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #444;
+    color: var(--placeholder-text);
     font-size: .85rem;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -570,7 +557,7 @@ body {
 .feature-card:hover {
     border-color: rgba(255, 217, 94, .25);
     transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(0,0,0,.4);
+    box-shadow: 0 12px 40px var(--card-hover-shadow);
 }
 
 .feature-card:hover::before {
@@ -702,13 +689,13 @@ body {
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    color: #444;
+    color: var(--placeholder-text);
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     border-color: var(--primary);
-    background: #252525;
+    background: var(--bg-card-2);
 }
 
 .contacto-info {
@@ -858,7 +845,7 @@ body {
 }
 
 .footer-nav a {
-    color: #555;
+    color: var(--footer-link);
     text-decoration: none;
     font-size: .8rem;
     text-transform: uppercase;
@@ -906,7 +893,7 @@ body {
 }
 
 .footer-copy {
-    color: #444;
+    color: var(--footer-meta);
     font-size: .78rem;
 }
 
@@ -916,7 +903,7 @@ body {
 }
 
 .footer-legal a {
-    color: #444;
+    color: var(--footer-meta);
     font-size: .78rem;
     text-decoration: none;
     transition: var(--transition);
@@ -987,7 +974,7 @@ body {
         left: 0;
         top: 0;
         flex-direction: column;
-        background-color: rgba(8, 8, 8, .97);
+        background-color: var(--mobile-menu-bg);
         width: 100%;
         height: 100vh;
         z-index: 999;
