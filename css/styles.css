@@ -796,6 +796,34 @@ body {
     font-size: .85rem;
 }
 
+/* ─── Estado del formulario de contacto ─── */
+#form-status {
+    margin-top: .75rem;
+    padding: .7rem 1rem;
+    border-radius: var(--radius);
+    font-size: .9rem;
+    font-weight: 600;
+    line-height: 1.4;
+    animation: fadeInUp .3s ease;
+}
+
+#form-status[data-tipo="success"] {
+    background: rgba(100, 200, 120, .12);
+    color: #6dbb80;
+    border: 1px solid rgba(100, 200, 120, .3);
+}
+
+#form-status[data-tipo="error"] {
+    background: rgba(220, 80, 80, .12);
+    color: #e08080;
+    border: 1px solid rgba(220, 80, 80, .3);
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
 /* ═══════════════════════════════════════════════
    FOOTER
 ═══════════════════════════════════════════════ */

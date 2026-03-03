@@ -69,14 +69,85 @@ tabBtns.forEach(btn => {
 });
 
 /* ═══════════════════════════════════════════════
-   CONTACT FORM (básico)
+   CONTACT FORM — EmailJS
 ═══════════════════════════════════════════════ */
-const contactForm = document.getElementById('contact-form');
+(function initContactForm() {
 
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    // Verificar que la librería y el config estén cargados
+    if (typeof emailjs === 'undefined' || typeof EMAILJS_CONFIG === 'undefined') {
+        console.warn('EmailJS o EMAILJS_CONFIG no encontrados.');
+        return;
+    }
+
+    emailjs.init(EMAILJS_CONFIG.publicKey);
+
+    const form      = document.getElementById('contact-form');
+    if (!form) return;
+
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const btnLabel  = submitBtn.textContent;
+
+    form.addEventListener('submit', async function (e) {
         e.preventDefault();
-        // Aquí va la lógica de envío
-        console.log('Formulario enviado');
+
+        const nombre  = document.getElementById('nombre').value.trim();
+        const email   = document.getElementById('email').value.trim();
+        const asunto  = document.getElementById('asunto').value.trim();
+        const mensaje = document.getElementById('mensaje').value.trim();
+
+        if (!nombre || !email || !asunto || !mensaje) {
+            mostrarEstado('Por favor completa todos los campos.', 'error');
+            return;
+        }
+
+        submitBtn.disabled    = true;
+        submitBtn.textContent = 'Enviando...';
+
+        const params = {
+            user_name:  nombre,
+            user_email: email,
+            subject:    asunto,
+            message:    mensaje,
+        };
+
+        try {
+            // 1. Notificación a la cuenta del juego
+            await emailjs.send(
+                EMAILJS_CONFIG.serviceId,
+                EMAILJS_CONFIG.templateToGame,
+                params
+            );
+
+            // 2. Respuesta automática al usuario
+            await emailjs.send(
+                EMAILJS_CONFIG.serviceId,
+                EMAILJS_CONFIG.templateToUser,
+                params
+            );
+
+            mostrarEstado('¡Mensaje enviado! Revisa tu correo para la confirmación.', 'success');
+            form.reset();
+
+        } catch (err) {
+            console.error('EmailJS error:', err);
+            mostrarEstado('Ocurrió un error al enviar. Inténtalo de nuevo.', 'error');
+        } finally {
+            submitBtn.disabled    = false;
+            submitBtn.textContent = btnLabel;
+        }
     });
-}
+
+    function mostrarEstado(mensaje, tipo) {
+        const prev = document.getElementById('form-status');
+        if (prev) prev.remove();
+
+        const el         = document.createElement('p');
+        el.id            = 'form-status';
+        el.textContent   = mensaje;
+        el.dataset.tipo  = tipo;
+        form.appendChild(el);
+
+        setTimeout(() => el && el.remove(), 6000);
+    }
+
+})();
