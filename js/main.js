@@ -58,13 +58,20 @@ sections.forEach(section => observer.observe(section));
 /* ═══════════════════════════════════════════════
    GALLERY TABS
 ═══════════════════════════════════════════════ */
-const tabBtns = document.querySelectorAll('.tab-btn');
+const tabBtns      = document.querySelectorAll('.tab-btn');
+const galleryGrids = document.querySelectorAll('.gallery-grid');
 
 tabBtns.forEach(btn => {
     btn.addEventListener('click', () => {
+        // Actualizar botón activo
         tabBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        // Aquí se puede agregar lógica para mostrar/ocultar contenido por tab
+
+        // Mostrar el grid correspondiente y ocultar el resto
+        const targetId = 'gallery-' + btn.dataset.tab;
+        galleryGrids.forEach(grid => {
+            grid.style.display = grid.id === targetId ? 'grid' : 'none';
+        });
     });
 });
 

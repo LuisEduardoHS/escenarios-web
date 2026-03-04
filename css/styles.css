@@ -637,6 +637,79 @@ body {
     min-height: 280px;
 }
 
+.gallery-empty {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 280px;
+    background: var(--bg-card);
+    border: 1px dashed var(--border);
+    border-radius: var(--radius);
+    color: var(--text-muted);
+    font-size: .85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* ═══════════════════════════════════════════════
+   MAPA / MUNDO
+═══════════════════════════════════════════════ */
+.mapa-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.mapa-zonas {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.zona-card {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 24px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: var(--transition);
+}
+
+.zona-card:hover {
+    border-color: rgba(255, 187, 107, .3);
+    transform: translateX(6px);
+    box-shadow: 0 6px 24px var(--card-hover-shadow);
+}
+
+.zona-num {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--primary);
+    opacity: .45;
+    line-height: 1;
+    flex-shrink: 0;
+    min-width: 48px;
+}
+
+.zona-info h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.zona-info p {
+    color: var(--text-muted);
+    font-size: .9rem;
+    line-height: 1.65;
+}
+
 /* ═══════════════════════════════════════════════
    CONTACTO
 ═══════════════════════════════════════════════ */
@@ -968,6 +1041,11 @@ body {
 
     .features-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .mapa-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
     }
 
     .contacto-grid {

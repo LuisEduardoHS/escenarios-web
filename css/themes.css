@@ -13,8 +13,8 @@
 ───────────────────────────────────────────── */
 :root {
     /* ── Marca ── */
-    --primary:              #ffd95e;
-    --primary-dark:         #c9a52a;
+    --primary:              #ffbb6b;
+    --primary-dark:         #f08c22;
 
     /* ── Layout ── */
     --radius:               8px;
