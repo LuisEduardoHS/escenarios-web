@@ -13,49 +13,41 @@
 ───────────────────────────────────────────── */
 :root {
     /* ── Marca ── */
-    --primary:              #ffbb6b;
-    --primary-dark:         #f08c22;
-
+    --primary: #6acdee;
+    --primary-dark: #0891be;
     /* ── Layout ── */
-    --radius:               8px;
-    --section-pad:          110px;
-    --transition:           all .3s ease;
-
+    --radius: 8px;
+    --section-pad: 110px;
+    --transition: all .3s ease;
     /* ── Fondos ── */
-    --bg:                   #1a1a1a;
-    --bg-alt:               #111111;
-    --bg-card:              #202020;
-    --bg-card-2:            #252525;
-
+    --bg: #1a1a1a;
+    --bg-alt: #111111;
+    --bg-card: #202020;
+    --bg-card-2: #252525;
     /* ── Bordes ── */
-    --border:               #2a2a2a;
-
+    --border: #2a2a2a;
     /* ── Texto ── */
-    --text:                 #ffffff;
-    --text-muted:           #888888;
-    --text-soft:            #cccccc;
-
+    --text: #ffffff;
+    --text-muted: #888888;
+    --text-soft: #cccccc;
     /* ── Header ── */
-    --header-bg:            rgba(0, 0, 0, .5);
-    --header-bg-scrolled:   rgba(10, 10, 10, .92);
-
+    --header-bg: rgba(0, 0, 0, .5);
+    --header-bg-scrolled: rgba(10, 10, 10, .92);
     /* ── Menú mobile ── */
-    --mobile-menu-bg:       rgba(8, 8, 8, .97);
-
+    --mobile-menu-bg: rgba(8, 8, 8, .97);
     /* ── Hero (gradientes) ── */
-    --hero-radial-1:        rgba(80, 50, 0, .55);
-    --hero-radial-2:        rgba(30, 20, 0, .4);
-    --hero-base-from:       #0d0d0d;
-    --hero-base-mid:        #1a1a1a;
-    --hero-base-to:         #0f0f0f;
-    --hero-grid-line:       rgba(255, 255, 255, .025);
-
+    --hero-radial-1: rgba(80, 50, 0, .55);
+    --hero-radial-2: rgba(30, 20, 0, .4);
+    --hero-base-from: #0d0d0d;
+    --hero-base-mid: #1a1a1a;
+    --hero-base-to: #0f0f0f;
+    --hero-grid-line: rgba(255, 255, 255, .025);
     /* ── Componentes ── */
-    --btn-outline-border:   rgba(255, 255, 255, .4);
-    --placeholder-text:     #444;
-    --card-hover-shadow:    rgba(0, 0, 0, .4);
-    --footer-link:          #555;
-    --footer-meta:          #444;
+    --btn-outline-border: rgba(255, 255, 255, .4);
+    --placeholder-text: #444;
+    --card-hover-shadow: rgba(0, 0, 0, .4);
+    --footer-link: #555;
+    --footer-meta: #444;
 }
 
 
